@@ -1,0 +1,87 @@
+---
+---
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ "css/index.css" | prepend: site.baseurl }}">
+        <title>polyrain.net</title>
+        <link rel="alternate" type="application/rss+xml"  href="{{ site.url }}/feed.xml" title="{{ site.title }}">
+        <script src="titles.js"></script>
+    </head>
+
+    <body>
+            {% include header.html %}
+        <main>
+            <div class="posts">
+
+                <div class="blogs">
+                   {% for post in paginator.posts %}
+                 
+                     <div class="blogTitle">
+ 
+                     <a href="{{ post.url }}">{{ post.title | prepend: "&nbsp"}}</a>
+ 
+                     </div>
+                 <p class="author">
+                     {% assign author = "&nbsp by jenna_macdonald" %}
+                   <span class="postDate">{{ post.date | append: author }}</span>
+                 </p>
+                 <div class="blurb">
+                   {{ post.excerpt }}
+                 </div>
+ 
+                 <br>
+               {% endfor %}
+               </div>
+             
+               <!-- Pagination links -->
+               <div class="links">
+                 <div class="pagination">
+                         {% if paginator.previous_page %}
+                           <a href="{{ paginator.previous_page_path }}" class="previous">
+                             Previous
+                           </a>
+                         {% else %}
+                           <span class="previous">Previous</span>
+                         {% endif %}
+                         <span class="page_number ">
+                           Page: {{ paginator.page }} of {{ paginator.total_pages }}
+                         </span>
+                         {% if paginator.next_page %}
+                           <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+                         {% else %}
+                           <span class="next ">Next</span>
+                         {% endif %}
+                       </div>
+                     </div>
+                   </div>
+        </main>
+
+        <nav>
+            <div class="buttonbar">
+                <ul>
+                    <li class="active">
+                        <a href="{{ "/index.html" | absolute_url }}">home</a>
+                    </li>
+                    <li>
+                      <a href="{{ site.baseurl }}/index.html">posts</a>
+                    </li>
+                    <li>
+                        <a href="{{ "/projects.html" | absolute_url }}">projects</a> 
+                    </li>
+                    <li>
+                        <a href="{{ "/about.html" | absolute_url }}">about</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        {% include twitter.html %}
+        
+
+        {% include footer.html %}
+    </body>
+</html>
+
+

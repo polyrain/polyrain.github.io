@@ -1,0 +1,195 @@
+main {
+    grid-row: 4;
+    grid-column: 2 / 4;
+    padding: 0 20px;
+    background-color: #F5F5F5;
+    display: inline;
+}
+
+.aboutSide {
+   
+        flex: 10;
+        justify-self: center;
+        align-self: right; 
+        
+    
+}
+
+.sidesec {
+    
+    justify-self: center;
+    align-self: right; 
+    min-width: 20%;
+    max-width: 150px;
+    flex: 35;
+    
+}
+
+.words {
+    flex: 65;
+    min-width: 25%;
+    justify-self: center;
+}
+
+.aboutWords {
+    flex: 90;
+    min-width: 25%;
+    justify-self: center;
+}
+
+.picBox {
+    display: flex;
+    flex-direction: column;
+   padding: 5px;
+    
+}
+
+.title {
+    color: white; font-size: 90%;
+    background-image: url('./tag.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 110%;
+    margin:5px;
+}
+.second {
+    
+    flex: 1;
+    align-self: center;
+    justify-self: center;
+}
+
+.aboutBox {
+    display:flex;
+    
+}
+
+.projBox {
+    border: 3px solid black;
+    display:flex;
+    padding: 5px;
+    
+}
+
+.projectArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "project1 project2" "project3 project4";
+    align-items: stretch;
+    font-family: clear_sans, Arial;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.project1 {
+    grid-area: project1;
+    
+}
+
+.project2 {
+    grid-area: project2;
+    
+}
+
+.project3 {
+    grid-area: project3;
+    
+}
+
+.project4 {
+    grid-area: project4;
+    
+}
+
+
+.picture {
+    flex: 1;
+    justify-self: center;
+    align-self: right; 
+    margin-left: 15px;
+    
+}
+
+.projectPicture {
+    
+    justify-self: center;
+    align-self: right; 
+    margin-left: 15px;
+    
+}
+
+.projectPicture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    
+    
+}
+
+.contacts {
+    list-style-type: none;
+    font-size: 75%;
+    padding-left: 5px;
+}
+
+.picture img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.postTitle {
+    color:white;
+    padding-left:20px;
+    font-size: 150%;
+    background-size: 120% 100%;
+    padding-right: 20px;
+    min-width: 0%;
+ 
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .picture img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+    }
+  }
+
+.picture a:link {
+    text-decoration: none;
+    color: #383837;
+}
+
+.picture a:hover {
+    
+    color: rgb(0, 162, 255) !important;
+}
+
+.picture a:visited {
+    text-decoration: none;
+    color: #383837;
+}
+
+.picture a:active {
+    text-decoration: none;
+    color: #383837;
+}
+
+.contacts a:visited {
+    
+    color: #0000FF;
+}
+
+.contacts a:link {
+  
+    color: #0000FF;
+}

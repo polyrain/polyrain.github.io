@@ -1,0 +1,60 @@
+<head>
+     <link rel="stylesheet" href="{{ site.baseurl }}/css/index.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/projects.css">  
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
+</head>
+
+<body>
+        {% include header.html %}
+    <main>
+        <div class="aboutBox">
+            <div class="aboutWords">
+                {{ content }}
+            </div>
+            <div class="aboutSide">
+                <div class="picBox">
+                    <div class="picture">
+                        <br>
+                        <img src="{{ "/assets/jenna.jpg" | absolute_url }}"/>
+                        <br>
+                    </div>
+                    
+                    <div class="second">
+                        
+                            <span class="title">&nbsp Contact me</span>
+                        
+                        <br>
+                        <ul class="contacts">
+                            <li>
+                                <a href="mailto:jenna@polyrain.dev">Email me</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/jenna-mac/">LinkedIn</a>
+                            </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <nav>
+        <div class="buttonbar">
+            <ul>
+                <li>
+                    <a href="{{ site.baseurl }}/index.html">posts</a>
+                </li>
+               
+                <li>
+                    <a href="{{ "/projects.html" | absolute_url }}">projects</a> 
+                </li>
+                <li class="active">
+                        <a href="{{ "/about.html" | absolute_url }}">about</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    {% include footer.html %}
+</body>
+
+

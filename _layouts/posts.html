@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl }}">
+        <title>polyrain.net</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+
+    <body>
+            {% include header.html %}
+        <main>
+            {{ content }}
+        </main>
+
+        <nav>
+            <div class="buttonbar">
+                <ul>
+                    <li>
+                        <a href="{{ "/index.html" | absolute_url }}">home</a>
+                    </li>
+                    <li class="active">
+                        <a href="{{ "/blog.html" | absolute_url }}">Posts</a>
+                    </li>
+                    <li>
+                        <a href="{{ "/projects.html" | absolute_url }}">projects</a> 
+                    </li>
+                    <li>
+                        <a href="{{ "/about.html" | absolute_url }}">about</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        {% include twitter.html %}
+        
+
+        {% include footer.html %}
+    </body>
+</html>
+
+

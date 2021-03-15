@@ -1,0 +1,53 @@
+
+<head>
+     <link rel="stylesheet" href="{{ site.baseurl }}/css/index.css">
+     <link rel="stylesheet" href="{{ site.baseurl }}/css/projects.css">      
+         <title>{{ page.title }} | {{ site.title }}</title>
+         <meta name="viewport" content="width=device-width, initial-scale=0.7">
+    </head>
+    
+    <body>
+            {% include header.html %}
+        <main>
+            <br>
+            
+            <div class="projectArea">
+                {% include project.html links="https://github.com/polyrain/uqcshackvim2018" content="Java application to generate Vim theme layouts using a JavaFX based GUI, submitted to the UQCS Hackathon in 2018. My contribution centred on GUI development." picture="/assets/vimple.png" base=site.url num=1 %}
+                &nbsp
+                
+                {% include project.html links="https://github.com/polyrain/unox" content="Uno for the UNIX command line. Still in active development; using ncurses for a GUI and non-blocking IO for communication between clients to enable chat." picture="/assets/uno-2.png" base=site.url num=2 %}
+
+            
+            
+           
+                {% include project.html links="https://github.com/polyrain/DesignSocietyUQ" content="I was the president of the Design Society at UQ for 2020! Details on our projects, including a slackbot and our code-of-conduct, can be found here." picture="/assets/duq.png" base=site.url num=3 %}
+                &nbsp
+                {% include project.html links="https://github.com/polyrain/polyrainVim" content="You can find the vimrc setup that I use to write most of work on my Github, linked in the photo here. I've found it super useful, and maybe you will too!" picture="/assets/vim.png" base=site.url num=4 %}
+
+                
+            </div>
+            
+        
+        </main>
+    
+        <nav>
+            <div class="buttonbar">
+                <ul>
+                    <li>
+                        <a href="{{ site.baseurl }}/index.html">posts</a>
+                    </li>
+                    
+                    <li class="active">
+                        <a href="{{ "projects.html" | absolute_url }}">PROJECTS</a> 
+                    </li>
+                    <li>
+                            <a href="{{ "about.html" | absolute_url }}">about</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        {% include footer.html %}
+    </body>
+    
+    
+    

@@ -1,0 +1,81 @@
+<html>
+    <!-- 
+        ollapisble menu taken from https://codeburst.io/how-to-make-a-collapsible-menu-using-only-css-a1cd805b1390 
+        by Nadia Hogg (Thank y'all Nadia!!)
+    -->
+    <head>
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/index.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/collapse.css">
+        <title>polyrain.net</title>
+        <link rel="alternate" type="application/rss+xml"  href="{{ site.url }}/feed.xml" title="{{ site.title }}">
+        <script src="{{ "/js/titles.js" | absolute_url }}"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=0.7">
+    </head>
+
+    <body>
+            {% include header.html %}
+        <main>
+            <br/>
+            <div style="padding-top: 20px"class="blogs">
+                {% for tag in site.tags %}
+                    <div class="collapsible-menu">
+                        <input type="checkbox" id={{tag[0]}} style="display: none">
+                        <label for={{tag[0]}}><h3>{{ tag[0] }}</h3></label>
+                        <div class="menu-content">
+                            <br/>
+                            <ul>
+                            {% for post in tag[1] %}
+                            <div class="blogTitle">
+
+                                <a href="{{ post.url }}">{{ post.title}}</a>
+
+                            </div>
+                            
+                            <p class="author">
+                                {% assign author = "&nbsp by jenna_macdonald" %}
+                                <span class="postDate"style="padding-top:10px">{{ post.date | append: author }}</span>
+                            </p>
+
+                            <div class="blurb">
+                                {{ post.excerpt }}
+                            </div>
+
+                            <br/>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <br/>
+                {% endfor %}
+            </div>
+        </main>
+            
+        
+
+        <nav>
+            <div class="buttonbar">
+                <ul>
+                    <li>
+                      <a href="{{ site.baseurl }}/index.html">posts</a>
+                    </li>
+                    
+                    <li>
+                        <a href="{{ "/projects.html" | absolute_url }}">projects</a> 
+                    </li>
+                    <li>
+                        <a href="{{ "/about.html" | absolute_url }}">about</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        {% include twitter.html %}
+
+        
+        
+
+        {% include footer.html %}
+    </body>
+</html>
+
+

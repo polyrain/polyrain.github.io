@@ -1,0 +1,58 @@
+
+<head>
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/index.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/projects.css">
+        <title>{{ page.title }} | {{ site.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=0.7">
+    </head>
+    
+    <body>
+        
+        {% include header.html %}
+        <main>
+            <div class="postStyle">
+                <div class="postContent">
+                    <div class="postContents">
+                        <br/>
+
+                <span class="blogTitle postTitle"> {{ page.title }}</span>
+                <br/>
+                <br/>
+                {{ content }}
+            </div>
+                </div>
+                <br>
+                <script src="https://utteranc.es/client.js"
+                        repo="polyrain/polyrain.github.io"
+                        issue-term="pathname"
+                        theme="preferred-color-scheme"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+            </div>
+            
+           
+        </main>
+    
+        <nav>
+            <div class="buttonbar">
+                <ul>
+                    <li>
+                        <a href="{{ site.baseurl }}/index.html">posts</a>
+                    </li>
+                    
+                    <li>
+                        <a href="{{ "/projects.html" | absolute_url }}">projects</a> 
+                    </li>
+                    <li>
+                        <a href="{{ "/about.html" | absolute_url }}">about</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        {% include footer.html %}
+    </body>
+    
+    
+    

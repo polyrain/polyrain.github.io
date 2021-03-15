@@ -1,0 +1,28 @@
+---
+layout: posts
+
+title: past posts
+---
+
+
+{{ content }}
+<br>
+
+<style>
+        a { color: #FFFFFF; } /* CSS link color */
+      </style>
+<ul class="myposts">
+{% for post in site.posts %}
+    <li>
+    <div class="blogTitle">
+    <a style="padding-left:5px; font-size: 110%"href="{{ post.url }}">{{ post.title }}</a> 
+    </div>
+    <span class="postDate">{{ post.date | date: "%b %-d, %Y" }} <br> </span> <br>
+    <span class="blurb">
+            {{ post.excerpt }}
+    </span>
+    </li>
+
+    <br>
+{% endfor %}
+</ul>
