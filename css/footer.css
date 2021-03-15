@@ -1,0 +1,14 @@
+footer {
+    grid-row: 7;
+    grid-column: 1 / 5;
+    background-color: #383837;
+}
+.bottomsep {
+    grid-row: 6;
+    grid-column: 1 / 5;
+    background-image: url('sep9.png');
+    background-repeat: space no-repeat;
+    background-position: top top;
+
+}
+
